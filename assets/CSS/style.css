@@ -1,0 +1,75 @@
+/* For Desktop */
+
+body {
+    margin: 1%;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 35px;
+}
+
+h1 {
+    font-size: xx-large;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    padding: 15px;
+}
+
+nav {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+    position: sticky;
+    top: 0px;
+}
+
+/* Link formatting */
+a{
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+a:hover {
+    color: black;
+}
+
+body section{
+    display: flex;
+    flex-flow: wrap;
+    border: solid 1px black;
+    border-radius: 15px;
+}
+
+body section h2{
+    font-size: larger;
+    text-align: center;
+}
+
+#professional-headshot{
+    border-radius: 15px;
+}
+
+.content-card {
+    display: flex;
+    flex-flow: wrap;
+}
+
+footer {
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    border-top: solid black 1px;
+    background-color: white;
+}
+
+
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+
+}
+
+@media only screen and (min-width: 768px) {
+    /* For Desktop */
+}
