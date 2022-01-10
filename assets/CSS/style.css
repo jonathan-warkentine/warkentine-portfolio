@@ -1,17 +1,23 @@
 /* For Desktop */
+:root {
+    --default-font-family: 'Courier New', Courier, monospace;
+    --default-background-color: slategray;
+    --default-border-radius: 5px;
+}
 
 body {
     margin: 1%;
     display: flex;
     flex-flow: column nowrap;
-    gap: 35px;
+    gap: 15px;
 }
 
 h1 {
     font-size: xx-large;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: var(--default-font-family);
     text-align: center;
-    padding: 15px;
+    padding-top: 5px;
+    text-decoration: underline;
 }
 
 nav {
@@ -27,41 +33,110 @@ nav {
 /* Link formatting */
 a{
     text-decoration: none;
-    font-family: 'Courier New', Courier, monospace;
-}
-
-a:hover {
+    font-family: var(--default-font-family);
+    padding: 1px;
     color: black;
 }
 
-body section{
-    display: flex;
-    flex-flow: wrap;
-    border: solid 1px black;
-    border-radius: 15px;
+a:hover {
+    color: white;
+    background-color: var(--default-background-color);
+    border-radius: 3px;
 }
 
-body section h2{
-    font-size: larger;
+main {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 15px;
+}
+
+main section{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+    border: solid var(--default-background-color) 1px;
+}
+
+.section-section{
+    border-left: solid 5px black;
+    width: 75%;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+}
+
+.section-title{
+    width: 20%;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: var(--default-background-color);
+    border-top-left-radius: var(--default-border-radius);
+    border-bottom-left-radius: var(--default-border-radius);
+    color: white;
+    -webkit-text-stroke: 0.3px black;
+}
+
+.section-title h2{
+    padding: 10px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
+}
+
+#about-me{
+    background-image: url(../images/Headshot\ High\ Resolution.jpg);
+    background-color: var(--default-background-color);
+    background-position: center;
+    background-size: cover;
+    height: 150px;
+    display: inline;
     text-align: center;
+    vertical-align: text-bottom;
+
+}
+
+#about-me p{
+    color: white;
+    font-weight: bold;
+    font-family: var(--default-font-family);
 }
 
 #professional-headshot{
     border-radius: 15px;
+    background-color: var(--default-background-color);
+    opacity: 50%;
 }
 
 .content-card {
     display: flex;
     flex-flow: wrap;
+    border: solid 1px black;
+    border-radius: var(--default-border-radius);
+}
+
+.content-card:hover {
+    background-color: var(--default-background-color);
+    cursor: grab;
+}
+
+.content-card h3{
+    padding: 10px;
 }
 
 footer {
     position: sticky;
-    bottom: 0;
-    width: 100%;
+    bottom: 0px;
+    width: 80%;
+    margin: auto;
     text-align: center;
-    border-top: solid black 1px;
     background-color: white;
+    padding: 15px;
+    font-size: small;
+
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+    align-items: center;
+    
 }
 
 
