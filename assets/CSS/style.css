@@ -1,26 +1,43 @@
 /* For Desktop */
+
+/* Creating variables to manage color scheme theme */
 :root {
     --default-font-family: 'Courier New', Courier, monospace;
     --default-background-color: rgb(70, 75, 80);
+    --page-background-color: whitesmoke;
     --default-border-radius: 5px;
+    --card-height: 150px;
 }
 
+/* creating some parameters for the webpage as a whole */
 body {
-    margin: 1%;
+    margin: 2%;
     display: flex;
     flex-flow: column nowrap;
     gap: 15px;
-    background-color: whitesmoke;
+    background-color: var(--page-background-color);
 }
 
+/* formatting the main heading */
 h1 {
     font-size: xx-large;
     font-family: var(--default-font-family);
     text-align: center;
     padding-top: 5px;
+    padding-bottom: 15px;
     text-decoration: underline;
 }
 
+/* formatting the header (containing the main heading and the navbar) */
+body header{
+    position: sticky;
+    top: 0;
+    background-color: var(--page-background-color);
+    border-bottom: solid black 1px;
+    padding: 15px;
+}
+
+/* formatting the navbar */
 nav {
     width: 50%;
     margin: auto;
@@ -33,7 +50,6 @@ nav {
 
 /* Link formatting */
 a {
-    all: unset;
     text-decoration: none;
     font-family: var(--default-font-family);
     padding: 1px;
@@ -47,6 +63,7 @@ a:hover {
     border-radius: 3px;
 }
 
+/* formatting the main section */
 main {
     display: flex;
     flex-flow: row wrap;
@@ -60,6 +77,7 @@ main section{
     border: solid var(--default-background-color) 1px;
 }
 
+/* formatting sections withing the main sections */
 .section-section{
     border-left: solid 5px black;
     width: 75%;
@@ -95,13 +113,11 @@ main section{
     background-size: cover;
     justify-content: center;
     align-items: flex-end;
-    padding-bottom: 15px;
 }
 
 #about-me{
-    display: flex;
-    justify-content: space-around;
-    
+    display: inline-block;
+    font-family: 'Courier New', Courier, monospace;
 
     /* background image approach */
     /* background-image: url(../images/Headshot\ High\ Resolution.jpg);
@@ -110,7 +126,18 @@ main section{
     height: 400px; */
 }
 
+#about-me p{
+    padding-left: 4%;
+}
 
+#about-me ul{
+    text-indent: 5%;
+    list-style-position: inside;
+}
+
+#first-project{
+    height: calc(var(--card-height)*2);
+}
 
 .content-card {
     display: flex;
@@ -119,6 +146,8 @@ main section{
     border-radius: var(--default-border-radius);
     margin: 5px;
     width: 95%;
+    padding: 5px;
+    height: var(--card-height);
 }
 
 .content-card:hover {
@@ -130,24 +159,27 @@ main section{
     padding: 10px;
 }
 
+
 footer{
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    text-align: center;
-    gap: 5px;
+    position: sticky;
+    bottom: 0px;
+    width: 100%;
+    padding-top: 15px;
+    padding: 15px;
+    height: 25px;
+    
+    align-items: center;
+    font-size: smaller;
+    background: var(--page-background-color);
+
+    border-top: solid black 1px;
+
 }
 
 footer div{
-    position: sticky;
-    bottom: 0px;
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    font-size: small;
-
     display: flex;
-    flex-flow: wrap;    
+    width: 50%;
+    margin: auto;
     justify-content: space-around;
 }
 
