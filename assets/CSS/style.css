@@ -10,6 +10,10 @@
 }
 
 /* creating some parameters for the webpage as a whole */
+*{
+    margin: 0;
+}
+
 body {
     margin: 2%;
     display: flex;
@@ -18,14 +22,28 @@ body {
     background-color: var(--page-background-color);
 }
 
-/* formatting the main heading */
+/* formatting all headers */
 h1 {
     font-size: xx-large;
     font-family: var(--default-font-family);
     text-align: center;
-    padding-top: 5px;
     padding-bottom: 15px;
     text-decoration: underline;
+}
+
+.section-title h2{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: x-large;
+    padding: 25px;
+    font-weight: bolder;
+    color: white;
+    -webkit-text-stroke: 1px black;
+}
+
+.content-card h3{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: x-large;
+    padding: 10px;
 }
 
 /* formatting the header (containing the main heading and the navbar) */
@@ -54,6 +72,8 @@ a {
     font-family: var(--default-font-family);
     padding: 1px;
     color: black;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 a:hover {
@@ -61,6 +81,7 @@ a:hover {
     cursor: pointer;
     background-color: var(--default-background-color);
     border-radius: 3px;
+
 }
 
 /* formatting the main section */
@@ -68,13 +89,16 @@ main {
     display: flex;
     flex-flow: row wrap;
     gap: 15px;
+    row-gap: 20px;
 }
 
-main section{
+main>section{
     display: flex;
     flex-flow: wrap;
     justify-content: space-around;
     border: solid var(--default-background-color) 1px;
+    border-top-right-radius: var(--default-border-radius);
+
 }
 
 /* formatting sections withing the main sections */
@@ -83,9 +107,15 @@ main section{
     width: 75%;
     display: flex;
     flex-flow: wrap;
-    justify-content: space-around;
     justify-content: flex-end;
     padding: 5px;
+}
+
+#section-section-section{
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap;
 }
 
 .section-title{
@@ -98,14 +128,7 @@ main section{
     
 }
 
-.section-title h2{
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: x-large;
-    padding: 25px;
-    font-weight: bolder;
-    color: white;
-    -webkit-text-stroke: 1px black;
-}
+
 
 #about-me-title{
     background-image: url(../images/Headshot\ High\ Resolution.jpg);
@@ -137,6 +160,7 @@ main section{
 
 #first-project{
     height: calc(var(--card-height)*2);
+    width: 90%;
 }
 
 .content-card {
@@ -144,19 +168,16 @@ main section{
     flex-flow: wrap;
     border: solid 1px black;
     border-radius: var(--default-border-radius);
-    margin: 5px;
-    width: 95%;
+    width: 40%;
     padding: 5px;
     height: var(--card-height);
+    margin: 2%;
 }
 
 .content-card:hover {
     background-color: var(--default-background-color);
     cursor: pointer;
-}
-
-.content-card h3{
-    padding: 10px;
+    color: white;
 }
 
 
