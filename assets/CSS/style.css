@@ -5,6 +5,7 @@
     --page-background-color: whitesmoke;
     --default-border-radius: 5px;
     --card-height: 150px;
+    --debugging-border-color: none;
 }
 
 /* creating some parameters for the webpage as a whole */
@@ -16,6 +17,7 @@
 /* For Mobile */
 body {
     margin: 2%;
+    margin-top: 0;
     display: flex;
     flex-flow: column nowrap;
     gap: 15px;
@@ -27,15 +29,15 @@ h1 {
     font-size: x-large;
     font-family: var(--default-font-family);
     text-align: center;
-    padding-bottom: 15px;
+    padding-bottom: 10px;
     text-decoration: underline;
 }
 
 .section-title h2{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: large;
+    font-size: xx-large;
     padding: 5px;
-    font-weight: bolder;
+    font-weight: 900;
     color: white;
     -webkit-text-stroke: 1px black;
 }
@@ -57,7 +59,7 @@ body header{
 
 /* formatting the navbar */
 nav {
-    width: 50%;
+    width: 75%;
     margin: auto;
     display: flex;
     flex-flow: wrap;
@@ -70,8 +72,8 @@ a {
     font-family: var(--default-font-family);
     padding: 1px;
     color: black;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 a:hover {
@@ -139,32 +141,32 @@ main>section{
 #about-me{
     display: inline-block;
     font-family: 'Courier New', Courier, monospace;
-
-    /* background image approach */
-    /* background-image: url(../images/Headshot\ High\ Resolution.jpg);
-    background-position: top;
-    background-size: cover;
-    height: 400px; */
 }
 
 #about-me p{
-    padding-left: 4%;
+    padding: 6%;
+    text-align: justify;
 }
 
 #about-me ul{
-    text-indent: 5%;
+    text-indent: 10%;
+    list-style-position: inside;
+}
+
+#about-me ul ul{
+    text-indent: 20%;
     list-style-position: inside;
 }
 
 #first-project{
     height: var(--card-height);
-    width: 90%;
+    width: 95%;
 }
 
 .content-card {
     display: flex;
     flex-flow: wrap;
-    border: solid 1px black;
+    /* border: solid 1px black; */
     border-radius: var(--default-border-radius);
     width: 40%;
     padding: 5px;
@@ -212,10 +214,13 @@ footer div{
     /* For Desktop */
 body {
     margin: 2%;
+    margin-top: 0;
     display: flex;
     flex-flow: column nowrap;
     gap: 15px;
     background-color: var(--page-background-color);
+    border: solid var(--debugging-border-color) 1px;
+
 }
 
 /* formatting all headers */
@@ -225,15 +230,6 @@ h1 {
     text-align: center;
     padding-bottom: 15px;
     text-decoration: underline;
-}
-
-.section-title h2{
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: x-large;
-    padding: 25px;
-    font-weight: bolder;
-    color: white;
-    -webkit-text-stroke: 1px black;
 }
 
 .content-card h3{
@@ -301,16 +297,17 @@ main>section{
     width: 75%;
     display: flex;
     flex-flow: wrap;
-    justify-content: flex-end;
+    justify-content: space-around;
     padding: 5px;
 }
 
-#section-section-section{
-    width: 75%;
+/* #section-section-section{
+    width: 90%;
     display: flex;
     justify-content: space-between;
     flex-flow: wrap;
-}
+
+} */
 
 .section-title{
     width: 20%;
@@ -322,7 +319,14 @@ main>section{
     
 }
 
-
+.section-title h2{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: xx-large;
+    padding: 50px;
+    font-weight: 900;
+    color: white;
+    -webkit-text-stroke: 1px black;
+}
 
 #about-me-title{
     background-image: url(../images/Headshot\ High\ Resolution.jpg);
@@ -333,23 +337,11 @@ main>section{
 }
 
 #about-me{
-    display: inline-block;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 0;
+    margin: 0;
     font-family: 'Courier New', Courier, monospace;
-
-    /* background image approach */
-    /* background-image: url(../images/Headshot\ High\ Resolution.jpg);
-    background-position: top;
-    background-size: cover;
-    height: 400px; */
-}
-
-#about-me p{
-    padding-left: 4%;
-}
-
-#about-me ul{
-    text-indent: 5%;
-    list-style-position: inside;
 }
 
 #first-project{
@@ -360,7 +352,7 @@ main>section{
 .content-card {
     display: flex;
     flex-flow: wrap;
-    border: solid 1px black;
+    /* border: solid 1px black; */
     border-radius: var(--default-border-radius);
     width: 40%;
     padding: 5px;
@@ -379,16 +371,15 @@ footer{
     position: sticky;
     bottom: 0px;
     width: 100%;
+    padding: 5px;
     padding-top: 15px;
-    padding: 15px;
-    height: 25px;
-    
+
     align-items: center;
     font-size: smaller;
     background: var(--page-background-color);
 
+    border: var(--debugging-border-color) solid 1px;
     border-top: solid black 1px;
-
 }
 
 footer div{
@@ -396,5 +387,6 @@ footer div{
     width: 50%;
     margin: auto;
     justify-content: space-around;
+    border: solid var(--debugging-border-color) 1px;
 }
 }
