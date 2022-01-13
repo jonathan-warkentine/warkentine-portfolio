@@ -139,14 +139,20 @@ main>section{
 }
 
 #about-me{
-    display: inline-block;
     font-family: 'Courier New', Courier, monospace;
+    text-align: justify;
+    padding: 0;
 }
 
-#about-me p{
-    padding: 6%;
-    text-align: justify;
+#about-me article{
+    padding: 3%;
+    width: 65%;
 }
+
+#about-me article p{
+    padding: 5px;
+}
+
 
 #about-me ul{
     text-indent: 10%;
@@ -215,6 +221,7 @@ footer div{
 body {
     margin: 2%;
     margin-top: 0;
+    margin-bottom: 0;
     display: flex;
     flex-flow: column nowrap;
     gap: 15px;
@@ -298,7 +305,7 @@ main>section{
     display: flex;
     flex-flow: wrap;
     justify-content: space-around;
-    padding: 5px;
+    padding-top: 20px;
 }
 
 /* #section-section-section{
@@ -346,7 +353,7 @@ main>section{
 
 #first-project{
     height: calc(var(--card-height)*2);
-    width: 90%;
+    width: 95%;
 }
 
 .content-card {
@@ -354,10 +361,11 @@ main>section{
     flex-flow: wrap;
     /* border: solid 1px black; */
     border-radius: var(--default-border-radius);
-    width: 40%;
+    width:43%;
     padding: 5px;
     height: var(--card-height);
     margin: 2%;
+    background-color: gray;
 }
 
 .content-card:hover {
