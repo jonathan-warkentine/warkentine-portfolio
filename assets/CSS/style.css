@@ -151,7 +151,7 @@ main>section{
 #about-me article{
     padding: 3%;
     width: 85%;
-    margin-left: 3%;
+    margin-left: 5%;
 }
 
 
@@ -328,7 +328,7 @@ main>section{
 }
 
 .section-title h2{
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: xx-large;
     padding: 50px;
     font-weight: 900;
