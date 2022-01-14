@@ -89,6 +89,8 @@ main {
     display: flex;
     flex-flow: row wrap;
     gap: 10px;
+    margin-left: 8%;
+    margin-right: 8%;
 }
 
 main>section{
@@ -142,15 +144,14 @@ main>section{
     font-family: 'Courier New', Courier, monospace;
     text-align: justify;
     padding: 0;
+    display: flex;
+    justify-content: center;
 }
 
 #about-me article{
     padding: 3%;
-    width: 65%;
-}
-
-#about-me article p{
-    padding: 5px;
+    width: 85%;
+    margin-left: 3%;
 }
 
 
