@@ -155,12 +155,13 @@ main>section{
 }
 
 
-#about-me ul{
-    text-indent: 10%;
+article p{
+    text-indent: 5%;
+    color: red;
     list-style-position: inside;
 }
 
-#about-me ul ul{
+article ul ul{
     text-indent: 20%;
     list-style-position: inside;
 }
@@ -365,7 +366,6 @@ main>section{
     width:43%;
     padding: 5px;
     height: var(--card-height);
-    margin: 2%;
     background-color: gray;
 }
 
