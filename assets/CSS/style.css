@@ -24,6 +24,11 @@ a {
     padding-right: 5px;
 }
 
+.link-wrap{ /* <a> tags used to wrap cards and such */
+    padding: 0;
+    margin-top: 0;
+}
+
 a:hover {
     color: white;
     cursor: pointer;
@@ -47,7 +52,7 @@ body header{
     position: sticky;
     top: 0;
     border-bottom: solid black 1px;
-    padding: 10px;
+    padding: 15px;
     padding-top: 20px;
     background-color: var(--page-background-color); /* keeps the sticky header from being transparent */
 }
@@ -77,20 +82,17 @@ body main{ /* main is a container for the "About Me" and "My Work" sections */
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    gap: 30px; /* gap between section title and section content when */
+    gap: 50PX; /* gap between "About Me" and "My Work" sections */
     margin-left: 6%;
     margin-right: 6%;
 }
 
 body main section{
-    text-align: center;
+    gap: 4px; /* gap between the section header and section content */
+    width: 100%;
     display: flex;
     flex-flow: wrap;
-    gap: 8px; /* gap between the section header and section content */
-}
-
-body main>section>div{
-    border: solid var(--default-background-color) 1px;
+    text-align: center;
 }
 
 body main .section-title{
@@ -101,19 +103,18 @@ body main .section-title{
 }
 
 body main .section-title h2{
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Arial Bold', sans-serif;
+    /* 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
     font-size: xx-large;
+    font-stretch: ultra-expanded;
     padding: 5px;
     font-weight: 900;
     color: white;
     -webkit-text-stroke: 1px black;
 }
 
-body main .section{
-    border-left: solid 5px black;
-}
-
 #about-me-title{
+    border: 1px solid black;
     background-image: url(../images/Headshot\ High\ Resolution.jpg);
     background-position: center;
     background-size: cover;
@@ -121,12 +122,13 @@ body main .section{
 
 #about-me{
     background-color: white;
+    border: 1px black solid;
+    border-left: solid 5px black;
 }
 
 #about-me *{
-    padding-left: 3%;
-    padding-right: 3%;
-    list-style-position: inside;
+    padding-left: 4%;
+    padding-right: 4%;
 }
 
 #about-me article{
@@ -136,10 +138,31 @@ body main .section{
 
 #about-me article ul{
     font-size: small;
+    margin-left: 5%;
+}
+
+body main section div a{ /* offsetting the general link formatting above for the project cards */
+    padding: 0;
+    margin: 0;
+}
+
+#projects{
+    width: 100%;
+    background-color: var(--page-background-color);
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    gap: 5px;
+    border-left: solid 5px black;
+
 }
 
 .project-card{
-    border-left: solid 5px black;
+    margin-top: -5px; /* I am not sure why this became necessary to offset the flex gap in #projects */
+    background-color: white;
+    border: 1px black solid;
+    border-left: none; 
     width: 100%;
 }
 
@@ -182,144 +205,96 @@ footer div{ /* adding a div prevents unwanted behavior when scrolling */
 
 /* T A B L E T   F O R M A T T I N G */
 @media only screen and (min-width: 600px) {
+    body header #small-page-title{ /* there are two title elements toggled by a media query to handle size constraints for smaller screens */
+        display: none;
+    }
 
+    body header #large-page-title{
+        display: block;
+        font-size: 200%;
+    }
+
+    #projects{
+        gap: 20px;
+    }
+
+    .project-card{
+        margin-top: -20px;
+    }
+
+    body main section{
+        gap: 10px;
+    }
 }
 
 
 /* D E S K T O P   F O R M A T T I N G */
-@media only screen and (min-width: 768px) {
-
-    /* General Formatting */
-    a {
-        text-decoration: none;
-        font-family: var(--default-font-family);
-        padding: 1px;
-        color: black;
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-
-    a:hover {
-        color: white;
-        cursor: pointer;
-        background-color: var(--default-background-color);
-        border-radius: 3px;
-    }
-    /* End General Formatting */
-
-    
+@media only screen and (min-width: 800px) {
     body header{
-        position: sticky;
-        top: 0;
-        background-color: var(--page-background-color);
-        border-bottom: solid black 1px;
-        padding: 15px;
+        display: flex;
+        flex-wrap: column wrap;
+        justify-content: space-around;
+        padding: 35px;
+        padding-top: 50px;
     }
-
-    body nav {
-        width: 50%;
-        margin: auto;
+    
+    body main section{
         display: flex;
         flex-flow: wrap;
-        justify-content: space-around;
+        justify-content: space-between;
     }
-
-    body header h1 {
-        font-size: xx-large;
-        font-family: var(--default-font-family);
-        text-align: center;
-        padding-bottom: 15px;
-        text-decoration: underline;
-    }
-
-    #large-page-title{
-        display: block;
-    }
-
-    #small-page-title{
-        display: none;
-    }
-
-    main { /* Container for the "About Me" and "My Work" sections */
+    
+    body main .section-title{
+        background-color: var(--default-background-color);
+        border-radius: var(--default-border-radius);
+        border-bottom-right-radius: 0;
+        width: 25%;
         display: flex;
-        flex-flow: row wrap;
         justify-content: center;
+        align-items: flex-end;
+        padding-bottom: 150px;
+        font-size: 300%;
     }
-
-    .section-title{
-        width: 22%;
+    
+    body header nav{
+        font-size: large;
+        width: 40%;
+        margin: 0;
+        display: flex; /* need to vertically center the nav elements to stay in line with the H1 */
+        flex-flow: nowrap;
         align-items: center;
-        justify-content: flex-end;
-        background-color: var(--default-background-color);
-        border-top-left-radius: var(--default-border-radius);
-        border-bottom-left-radius: var(--default-border-radius);
     }
 
-    .section-title h2{
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: xx-large;
-        padding: 50px;
-        font-weight: 900;
-        color: white;
-        -webkit-text-stroke: 1px black;
+    #about-me{
+        width: 70%;
+        padding: 0;
+        margin: 0;
     }
 
-    .section-article{
-        border-left: solid 5px black;
-        padding-left: 50px;
-        width: 60%;
-        display: flex;
-        flex-flow: wrap;
-        justify-content: space-around;
-        border-top-right-radius: var(--default-border-radius);
-    }
-
-    /* #about-me-title{
-        background-image: url(../images/Headshot\ High\ Resolution.jpg);
-        background-position: center;
-        background-size: cover;
-        justify-content: center;
-    } */
-
-    .project-card {
-        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        font-size: x-large;
-        border-left: solid 5px black;
-        width: 60%;
-        padding-left: 50px;
-    }
-
-    .project-card:hover {
-        background-color: var(--default-background-color);
-        cursor: pointer;
-        color: white;
-    }
-
-    #first-project{
-        height: calc(var(--card-height)*2);
-        width: 95%;
+    #projects{
+        width: 70%;
+        padding: 0;
+        margin: 0;
     }
 
     footer{
-        position: sticky;
-        bottom: 0px;
-        width: 100%;
-        padding: 5px;
-        padding-top: 15px;
-
-        align-items: center;
-        font-size: smaller;
-        background: var(--page-background-color);
-
-        border: var(--debugging-border-color) solid 1px;
-        border-top: solid black 1px;
+        padding: 20px;
     }
+}
 
-    footer div{
-        display: flex;
-        width: 50%;
-        margin: auto;
-        justify-content: space-around;
-        border: solid var(--debugging-border-color) 1px;
+/* Formatting for Extra Large Screen */
+@media only screen and (min-width: 1200px) { 
+    
+    body header #large-page-title{
+        font-size: 300%;
+    }
+    
+    .section-title{
+        font-size: 500%;
+    }
+    
+    body header nav{
+        font-size: x-large;
+        width: 40%;
     }
 }
