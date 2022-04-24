@@ -164,6 +164,7 @@ body main section div a{ /* offsetting the general link formatting above for the
     border: 1px black solid;
     border-left: none; 
     width: 100%;
+    padding-bottom: 300px;
 }
 
 .project-card:hover {
@@ -174,9 +175,13 @@ body main section div a{ /* offsetting the general link formatting above for the
 
 .project-card h3{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: large;
+    font-size: xx-large;
     font-weight: 800;
-    padding: 10px;
+    padding: 25px;
+}
+
+.project-card h4{
+    font-size: x-large;
 }
 
 .github-link{
@@ -199,6 +204,17 @@ footer div{ /* adding a div prevents unwanted behavior when scrolling */
     display: flex;
     flex-flow: nowrap;
     justify-content: space-between;
+}
+
+#traks{
+    /* border: 1px solid black; */
+    background-image: url(../images/traks\ screenshot.png);
+    background-position: left;
+    background-size: cover;
+}
+
+#traks *{
+    color: white;
 }
 /* E N D   M O B I L E   F O R M A T T I N G */
 
