@@ -154,7 +154,6 @@ body main section div a{ /* offsetting the general link formatting above for the
     justify-content: space-around;
     gap: 500px;
     border-left: solid 5px black;
-
 }
 
 .project-card{
@@ -211,7 +210,7 @@ footer div{ /* adding a div prevents unwanted behavior when scrolling */
     /* border: 1px solid black; */
     background-image: url(../images/traks\ screenshot.png);
     background-size: cover;
-    background-position: left;
+    background-position: top;
     box-shadow:inset 0 0 600px 75px rgba(0,0,0,1);
 }
 
