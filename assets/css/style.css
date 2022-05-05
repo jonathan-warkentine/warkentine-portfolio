@@ -15,6 +15,10 @@
     font-family: var(--default-font-family); /* Default font */
 }
 
+li {
+    margin-top: 5px;
+}
+
 a {
     text-decoration: none;
     font-family: var(--default-font-family);
@@ -34,7 +38,6 @@ a:hover {
     cursor: pointer;
     background-color: var(--default-background-color);
     border-radius: 3px;
-
 }
 /* End general formatting */
 
@@ -103,16 +106,6 @@ body main .section-title{
     width: 100%;
 }
 
-.inner-title{
-    margin-top: 60%;
-    border-radius: 15px;
-    padding: 10px;
-    position: sticky;
-    top: 60%;
-    bottom: 20%;
-    z-index: 1;
-}
-
 body main .section-title h2{
     font-family: 'Arial Bold', sans-serif;
     /* 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
@@ -163,8 +156,7 @@ body main section div a{ /* offsetting the general link formatting above for the
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-around;
-    gap: 500px;
-    border-left: solid 5px black;
+    gap: 30px;
 }
 
 .project-card{
@@ -174,8 +166,7 @@ body main section div a{ /* offsetting the general link formatting above for the
     border-left: none; 
     width: 100%;
     padding-bottom: 300px;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-radius: 5px;
 }
 
 .project-card:hover {
@@ -292,12 +283,24 @@ footer div{ /* adding a div prevents unwanted behavior when scrolling */
         font-size: 200%;
     }
 
+    #large-page-title h1{
+        font-size: 150%;
+    }
+
+    #large-page-title h2{
+        display: none;
+    }
+
     #projects{
         gap: 20px;
+        border-left: solid 5px black;
     }
 
     .project-card{
         margin-top: -20px;
+        border-radius: 0px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
     }
 
     body main section{
@@ -340,6 +343,28 @@ footer div{ /* adding a div prevents unwanted behavior when scrolling */
         align-items: center;
     }
 
+    #large-page-title {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+    }
+
+    #large-page-title h2{
+        display: block;
+        font-size: xx-large;
+        font-style: italic;
+    }
+
+    .inner-title{
+        margin-top: 60%;
+        border-radius: 15px;
+        padding: 10px;
+        position: sticky;
+        top: 60%;
+        bottom: 20%;
+        z-index: 1;
+    }
+
     #about-me{
         width: 70%;
         padding: 0;
@@ -360,8 +385,11 @@ footer div{ /* adding a div prevents unwanted behavior when scrolling */
 /* Formatting for Extra Large Screen */
 @media only screen and (min-width: 1200px) { 
     
-    body header #large-page-title{
+    #large-page-title{
+        display: flex;
         font-size: 300%;
+        /* flex-wrap: row nowrap; */
+        /* gap: 20px; */
     }
     
     .section-title{
