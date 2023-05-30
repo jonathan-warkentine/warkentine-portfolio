@@ -237,7 +237,14 @@ footer div{ /* adding a div prevents unwanted behavior when scrolling */
 }
 
 #traks *{
-        color: white;
+    color: white;
+}
+
+#go-api-test-generator {
+    background-image: url(../images/GO\ API\ Test\ Screenshot.png);
+    background-size: cover;
+    background-position: center;
+    box-shadow:inset 0 0 600px 75px rgba(0,0,0,1);
 }
 
 #snodes{
