@@ -240,6 +240,18 @@ footer div{ /* adding a div prevents unwanted behavior when scrolling */
     color: white;
 }
 
+#ai-email-assistant{
+    /* border: 1px solid black; */
+    background-image: url(../images/ai\ assistant\ email\ exchange.png);
+    background-size: cover;
+    background-position: center;
+    box-shadow:inset 0 0 600px 75px rgba(0,0,0,1);
+}
+
+#ai-email-assistant *{
+    color: white;
+}
+
 #go-api-test-generator {
     background-image: url(../images/GO\ API\ Test\ Screenshot.png);
     background-size: cover;
